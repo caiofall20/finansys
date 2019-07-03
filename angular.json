@@ -46,14 +46,17 @@
             ],
             "styles": [
               "src/styles.css",
+              "node_mudules/bootstrap/dist/css/bootstrap.min.css",
               "node_mudules/toastr/build/toastr.min.css",
               "node_modules/primeicons/primeicons.css",
               "node_modules/resourses/prime.min.ng",
-              "node_modules/primeng/resources/themes/nova-light/theme.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "node_modules/primeng/resources/themes/nova-light/theme.css"
+
             ],
             "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "node_mudules/jquery/dist/js/bootstrap.min.js",
+              "node_mudules/chart.js/dist/Chart.bundle.js"
             ]
           },
           "configurations": {
