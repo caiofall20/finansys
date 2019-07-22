@@ -7,7 +7,8 @@ import { CategoryService } from "../shared/category.service";
 
 import { switchMap } from "rxjs/operators";
 
-import toastr from "toastr";
+import toastr from 'toastr';
+
 
 @Component({
   selector: 'app-category-form',
@@ -96,7 +97,7 @@ export class CategoryFormComponent implements OnInit, AfterContentChecked {
 
     this.categoryService.create(category)
     .subscribe(
-      category => this.actionsForSucess(category),
+      category => this.actionsForSuccess(category),
       error => this.actionsForError(error)
     )
   }
@@ -106,14 +107,14 @@ export class CategoryFormComponent implements OnInit, AfterContentChecked {
 
     this.categoryService.update(category)
     .subscribe(
-      category => this.actionsForSucess(category),
+      category => this.actionsForSuccess(category),
       error => this.actionsForError(error)
     )
 
   }
 
-  private actionsForSucess(category: Category){
-    toastr.sucess("Solicitação processada com sucesso!")
+  private actionsForSuccess(category: Category){
+    toastr.success("Solicitação processada com sucesso!")
 // redirecionando para o categoria
     this.router.navigateByUrl("categories", {skipLocationChange: true}).then(
       () => this.router.navigate(["categories", category.id, "edit"])
@@ -129,6 +130,6 @@ export class CategoryFormComponent implements OnInit, AfterContentChecked {
     if(error.status === 422)
     this.serverErrorMessages = JSON.parse(error.body).errors;
     else
-      this.serverErrorMessages = ["Falha na comunicação com o servidor. Por favor, teste mais tarde."]
+      this.serverErrorMessages = ["Falha na comunicação com o servidor. Por favor, tente mais tarde."]
   }
 }
