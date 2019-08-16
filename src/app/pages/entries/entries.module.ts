@@ -16,6 +16,7 @@ import { IMaskModule } from "angular-imask";
     EntriesRoutingModule,
     ReactiveFormsModule,
     CalendarModule,
+    
     IMaskModule
   ],
   declarations: [EntryListComponent, EntryFormComponent]
